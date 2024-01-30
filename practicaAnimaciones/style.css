@@ -1,0 +1,908 @@
+:root{
+    --colorLetreroEquipo1:rgb(65, 65, 65);
+    --colorLetreroEquipo2:rgb(44, 29, 106);
+}
+*{
+    margin:0;
+}
+.campo{
+    background-image: url(imagenes/CampoFutbol.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    position:relative;
+    gap:10rem;
+}
+.portero1, .defensa1-1, .defensa1-2, .defensa1-3, .medio1-1, .medio1-2, .medio1-3, .delantero1-1, .delantero1-2,
+.portero2, .defensa2-1, .defensa2-2, .defensa2-3, .medio2-1, .medio2-2, .medio2-3, .delantero2-1, .delantero2-2{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 150px;
+    height: 150px;
+    position:absolute;
+    border-radius: 50%;
+}
+
+.letreroPortero1,.letreroDefensa1-1, .letreroDefensa1-2, .letreroDefensa1-3, .letreroMedio1-1, .letreroMedio1-2,
+.letreroMedio1-3, .letreroDelantero1-1, .letreroDelantero1-2{
+    border-radius: 5px;
+    background-color:var(--colorLetreroEquipo1);
+    position:absolute;
+    -webkit-text-stroke: 0.5px black;
+    font-size: 25px;
+    color: white;
+    height: 2rem;
+}
+.letreroPortero2, .letreroDefensa2-1, .letreroDefensa2-2, .letreroDefensa2-3, .letreroMedio2-1, .letreroMedio2-2, 
+.letreroMedio2-3, .letreroDelantero2-1, .letreroDelantero2-2{
+    border-radius: 5px;
+    background-color:var(--colorLetreroEquipo2);
+    position:absolute;
+    -webkit-text-stroke: 0.5px black;
+    font-size: 25px;
+    color: white;
+    height: 2rem;
+}
+
+.letreroPortero1{
+    bottom:30vh;
+    animation:colocarLetreroPortero 6s;
+    animation-fill-mode: forwards;
+}
+.portero1{
+    background-image: url(imagenes/Portero1.jpeg);
+    animation: colocarPortero 6s;
+    animation-fill-mode: forwards;
+}
+@keyframes colocarPortero{
+    0%{ 
+        top:-100%;
+        left:40vw;
+    }
+    50%{
+        transform: rotate(0deg);
+        top:15vh;
+        left:40vw;
+        width: 300px;
+        height: 300px;
+    }
+    100%{
+        transform: rotate(-360deg);
+        top:40vh;
+        left:0;
+    }
+}
+@keyframes colocarLetreroPortero {
+    0%{
+        left:45vw;
+        opacity: 0;
+    }
+    50%{
+        opacity: 100;
+        bottom:30vh;
+        left:45vw;
+        }
+    100%{
+        left:0;
+    }
+}
+
+.defensa1-1{
+    opacity:0;
+    background-image: url(imagenes/Defensa1-1.jpeg);
+    animation: colocarDefensa1-1 6s 6s;
+    animation-fill-mode: forwards;
+}
+.letreroDefensa1-1{
+    opacity:0;
+    animation:colocarLetreroDefensa1-1 6s 6s;
+    animation-fill-mode: forwards;
+}
+@keyframes colocarDefensa1-1{
+    0%{ 
+        top:-100%;
+        left:40vw;
+    }
+    50%{
+        opacity:1;
+        transform: rotate(0deg);
+        top:15vh;
+        left:40vw;
+        width: 300px;
+        height: 300px;
+    }
+    100%{
+        opacity:1;
+        transform: rotate(-360deg);
+        top:5vh;
+        left:10vw;
+    }
+}
+@keyframes colocarLetreroDefensa1-1 {
+    0%{
+        left:45vw;
+        top:70vh;
+        opacity: 0;
+    }
+    50%{
+        opacity:1;
+        left:45vw;
+        top:70vh;
+        }
+    100%{
+        opacity:1;
+        left:10vw;
+        top:29vh;
+    }
+}
+
+.defensa1-2{
+    opacity:0;
+    background-image: url(imagenes/Defensa1-2.jpeg);
+    animation: colocarDefensa1-2 6s 12s;
+    animation-fill-mode: forwards;
+}
+.letreroDefensa1-2{
+    opacity:0;
+    animation:colocarLetreroDefensa1-2 6s 12s;
+    animation-fill-mode: forwards;
+}
+@keyframes colocarDefensa1-2{
+    0%{ 
+        top:-100%;
+        left:40vw;
+    }
+    50%{
+        opacity:1;
+        transform: rotate(0deg);
+        top:15vh;
+        left:40vw;
+        width: 300px;
+        height: 300px;
+    }
+    100%{
+        opacity:1;
+        transform: rotate(-360deg);
+        top:40vh;
+        left:12vw;
+    }
+}
+@keyframes colocarLetreroDefensa1-2 {
+    0%{
+        bottom:30vh;
+        left:45vw;
+        opacity: 0;
+    }
+    50%{
+        opacity:1;
+        left:45vw;
+        bottom:30vh;
+        }
+    100%{
+        bottom:30vh;
+        opacity: 1;
+        left:13vw;
+    }
+}
+.defensa1-3{
+    opacity:0;
+    background-image: url(imagenes/Defensa1-3.jpeg);
+    animation: colocarDefensa1-3 6s 18s;
+    animation-fill-mode: forwards;
+}
+.letreroDefensa1-3{
+    opacity:0;
+    animation:colocarLetreroDefensa1-3 6s 18s;
+    animation-fill-mode: forwards;
+}
+@keyframes colocarDefensa1-3{
+    0%{ 
+        bottom:100vh;
+        left:40vw;
+    }
+    50%{
+        opacity:1;
+        transform: rotate(0deg);
+        bottom:40vh;
+        left:40vw;
+        width: 300px;
+        height: 300px;
+    }
+    100%{
+        opacity:1;
+        transform: rotate(-360deg);
+        bottom:6vh;
+        left:10vw;
+    }
+}
+@keyframes colocarLetreroDefensa1-3 {
+    0%{
+        bottom:30vh;
+        left:45vw;
+        opacity: 0;
+    }
+    50%{
+        opacity:1;
+        left:45vw;
+        bottom:30vh;
+    }
+    100%{
+        opacity: 1;
+        bottom:1vh;
+        left:12vw;
+    }
+}
+.medio1-1{
+    opacity:0;
+    background-image: url(imagenes/Medio1-1.jpeg);
+    animation: colocarMedio1-1 6s 24s;
+    animation-fill-mode: forwards;
+}
+.letreroMedio1-1{
+    opacity:0;
+    animation:colocarLetreroMedio1-1 6s 24s;
+    animation-fill-mode: forwards;
+}
+@keyframes colocarMedio1-1{
+    0%{ 
+        top:-100%;
+        left:40vw;
+    }
+    50%{
+        opacity:1;
+        transform: rotate(0deg);
+        top:15vh;
+        left:40vw;
+        width: 300px;
+        height: 300px;
+    }
+    100%{
+        opacity:1;
+        transform: rotate(-360deg);
+        top:1vh;
+        left:23vw;
+    }
+}
+@keyframes colocarLetreroMedio1-1 {
+    0%{
+        left:45vw;
+        top:70vh;
+        opacity: 0;
+    }
+    50%{
+        opacity:1;
+        left:45vw;
+        top:70vh;
+        }
+    100%{
+        opacity:1;
+        left:24vw;
+        top:25vh;
+    }
+}
+.medio1-2{
+    opacity:0;
+    background-image: url(imagenes/Medio1-2.jpeg);
+    animation: colocarMedio1-2 6s 30s;
+    animation-fill-mode: forwards;
+}
+.letreroMedio1-2{
+    opacity:0;
+    animation:colocarLetreroMedio1-2 6s 30s;
+    animation-fill-mode: forwards;
+}
+@keyframes colocarMedio1-2{
+    0%{ 
+        top:-100%;
+        left:40vw;
+    }
+    50%{
+        opacity:1;
+        transform: rotate(0deg);
+        top:15vh;
+        left:40vw;
+        width: 300px;
+        height: 300px;
+    }
+    100%{
+        opacity:1;
+        transform: rotate(-360deg);
+        top:40vh;
+        left:24vw;
+    }
+}
+@keyframes colocarLetreroMedio1-2 {
+    0%{
+        bottom:30vh;
+        left:45vw;
+        opacity: 0;
+    }
+    50%{
+        opacity:1;
+        left:45vw;
+        bottom:30vh;
+        }
+    100%{
+        bottom:30vh;
+        opacity: 1;
+        left:27vw;
+    }
+}
+.medio1-3{
+    opacity:0;
+    background-image: url(imagenes/Medio1-3.jpeg);
+    animation: colocarMedio1-3 6s 36s;
+    animation-fill-mode: forwards;
+}
+.letreroMedio1-3{
+    opacity:0;
+    animation:colocarLetreroMedio1-3 6s 36s;
+    animation-fill-mode: forwards;
+}
+@keyframes colocarMedio1-3{
+    0%{ 
+        bottom:100vh;
+        left:40vw;
+    }
+    50%{
+        opacity:1;
+        transform: rotate(0deg);
+        bottom:40vh;
+        left:40vw;
+        width: 300px;
+        height: 300px;
+    }
+    100%{
+        opacity:1;
+        transform: rotate(-360deg);
+        bottom:6vh;
+        left:23vw;
+    }
+}
+@keyframes colocarLetreroMedio1-3 {
+    0%{
+        bottom:30vh;
+        left:45vw;
+        opacity: 0;
+    }
+    50%{
+        opacity:1;
+        left:45vw;
+        bottom:30vh;
+    }
+    100%{
+        opacity: 1;
+        bottom:1vh;
+        left:25vw;
+    }
+}
+.delantero1-1{
+    opacity:0;
+    background-image: url(imagenes/Delantero1-1.jpg);
+    animation: colocarDelantero1-1 6s 42s;
+    animation-fill-mode: forwards;
+}
+.letreroDelantero1-1{
+    opacity:0;
+    animation:colocarLetreroDelantero1-1 6s 42s;
+    animation-fill-mode: forwards;
+}
+@keyframes colocarDelantero1-1{
+    0%{ 
+        top:-100%;
+        left:40vw;
+    }
+    50%{
+        opacity:1;
+        transform: rotate(0deg);
+        top:15vh;
+        left:40vw;
+        width: 300px;
+        height: 300px;
+    }
+    100%{
+        opacity:1;
+        transform: rotate(-360deg);
+        top:14vh;
+        left:36vw;
+    }
+}
+@keyframes colocarLetreroDelantero1-1 {
+    0%{
+        left:45vw;
+        top:70vh;
+        opacity: 0;
+    }
+    50%{
+        opacity:1;
+        left:45vw;
+        top:70vh;
+        }
+    100%{
+        opacity:1;
+        left:38vw;
+        top:38vh;
+    }
+}
+.delantero1-2{
+    opacity:0;
+    background-image: url(imagenes/Delantero1-2.jpeg);
+    animation: colocarDelantero1-2 6s 48s;
+    animation-fill-mode: forwards;
+}
+.letreroDelantero1-2{
+    opacity:0;
+    animation:colocarLetreroDelantero1-2 6s 48s;
+    animation-fill-mode: forwards;
+}
+@keyframes colocarDelantero1-2{
+    0%{ 
+        bottom:100vh;
+        left:40vw;
+    }
+    50%{
+        opacity:1;
+        transform: rotate(0deg);
+        bottom:30vh;
+        left:40vw;
+        width: 300px;
+        height: 300px;
+    }
+    100%{
+        opacity:1;
+        transform: rotate(-360deg);
+        bottom:18vh;
+        left:36vw;
+    }
+}
+@keyframes colocarLetreroDelantero1-2 {
+    0%{
+        bottom:30vh;
+        left:45vw;
+        opacity: 0;
+    }
+    50%{
+        opacity:1;
+        left:45vw;
+        bottom:30vh;
+        }
+    100%{
+        bottom:12vh;
+        opacity: 1;
+        left:38vw;
+    }
+}
+.letreroPortero2{
+    opacity: 0;
+    bottom:30vh;
+    animation:colocarLetreroPortero2 6s 54s;
+    animation-fill-mode: forwards;
+}
+.portero2{
+    opacity: 0;
+    background-image: url(imagenes/TodoEquipo2.png);
+    animation: colocarPortero2 6s 54s;
+    animation-fill-mode: forwards;
+}
+@keyframes colocarPortero2{
+    0%{ 
+        top:-100%;
+        right:40vw;
+    }
+    50%{
+        transform: rotate(0deg);
+        top:15vh;
+        right:40vw;
+        width: 300px;
+        height: 300px;
+    }
+    100%{
+        opacity:1;
+        transform: rotate(360deg);
+        top:40vh;
+        right:0;
+    }
+}
+@keyframes colocarLetreroPortero2{
+    0%{
+        right:45vw;
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+        bottom:30vh;
+        right:45vw;
+        }
+    100%{opacity:1;
+        right:3vw;
+    }
+}
+
+.defensa2-1{
+    opacity:0;
+    background-image: url(imagenes/TodoEquipo2.png);
+    animation: colocarDefensa2-1 6s 60s;
+    animation-fill-mode: forwards;
+}
+.letreroDefensa2-1{
+    opacity:0;
+    animation:colocarLetreroDefensa2-1 6s 60s;
+    animation-fill-mode: forwards;
+}
+@keyframes colocarDefensa2-1{
+    0%{ 
+        top:-100%;
+        right:40vw;
+    }
+    50%{
+        opacity:1;
+        transform: rotate(0deg);
+        top:15vh;
+        right:40vw;
+        width: 300px;
+        height: 300px;
+    }
+    100%{
+        opacity:1;
+        transform: rotate(360deg);
+        top:5vh;
+        right:10vw;
+    }
+}
+@keyframes colocarLetreroDefensa2-1 {
+    0%{
+        right:45vw;
+        top:70vh;
+        opacity: 0;
+    }
+    50%{
+        opacity:1;
+        right:45vw;
+        top:70vh;
+        }
+    100%{
+        opacity:1;
+        right:14vw;
+        top:29vh;
+    }
+}
+
+.defensa2-2{
+    opacity:0;
+    background-image: url(imagenes/TodoEquipo2.png);
+    animation: colocarDefensa2-2 6s 66s;
+    animation-fill-mode: forwards;
+}
+.letreroDefensa2-2{
+    opacity:0;
+    animation:colocarLetreroDefensa2-2 6s 66s;
+    animation-fill-mode: forwards;
+}
+@keyframes colocarDefensa2-2{
+    0%{ 
+        top:-100%;
+        right:40vw;
+    }
+    50%{
+        opacity:1;
+        transform: rotate(0deg);
+        top:15vh;
+        right:40vw;
+        width: 300px;
+        height: 300px;
+    }
+    100%{
+        opacity:1;
+        transform: rotate(360deg);
+        top:40vh;
+        right:12vw;
+    }
+}
+@keyframes colocarLetreroDefensa2-2 {
+    0%{
+        bottom:30vh;
+        right:45vw;
+        opacity: 0;
+    }
+    50%{
+        opacity:1;
+        right:45vw;
+        bottom:30vh;
+        }
+    100%{
+        bottom:30vh;
+        opacity: 1;
+        right:14vw;
+    }
+}
+.defensa2-3{
+    opacity:0;
+    background-image: url(imagenes/TodoEquipo2.png);
+    animation: colocarDefensa2-3 6s 72s;
+    animation-fill-mode: forwards;
+}
+.letreroDefensa2-3{
+    opacity:0;
+    animation:colocarLetreroDefensa2-3 6s 72s;
+    animation-fill-mode: forwards;
+}
+@keyframes colocarDefensa2-3{
+    0%{ 
+        bottom:100vh;
+        right:40vw;
+    }
+    50%{
+        opacity:1;
+        transform: rotate(0deg);
+        bottom:40vh;
+        right:40vw;
+        width: 300px;
+        height: 300px;
+    }
+    100%{
+        opacity:1;
+        transform: rotate(360deg);
+        bottom:6vh;
+        right:10vw;
+    }
+}
+@keyframes colocarLetreroDefensa2-3 {
+    0%{
+        bottom:30vh;
+        right:45vw;
+        opacity: 0;
+    }
+    50%{
+        opacity:1;
+        right:45vw;
+        bottom:30vh;
+    }
+    100%{
+        opacity: 1;
+        bottom:1vh;
+        right:14vw;
+    }
+}
+.medio2-1{
+    opacity:0;
+    background-image: url(imagenes/TodoEquipo2.png);
+    animation: colocarMedio2-1 6s 78s;
+    animation-fill-mode: forwards;
+}
+.letreroMedio2-1{
+    opacity:0;
+    animation:colocarLetreroMedio2-1 6s 78s;
+    animation-fill-mode: forwards;
+}
+@keyframes colocarMedio2-1{
+    0%{ 
+        top:-100%;
+        right:40vw;
+    }
+    50%{
+        opacity:1;
+        transform: rotate(0deg);
+        top:15vh;
+        right:40vw;
+        width: 300px;
+        height: 300px;
+    }
+    100%{
+        opacity:1;
+        transform: rotate(360deg);
+        top:1vh;
+        right:23vw;
+    }
+}
+@keyframes colocarLetreroMedio2-1 {
+    0%{
+        right:45vw;
+        top:70vh;
+        opacity: 0;
+    }
+    50%{
+        opacity:1;
+        right:45vw;
+        top:70vh;
+        }
+    100%{
+        opacity:1;
+        right:26vw;
+        top:25vh;
+    }
+}
+.medio2-2{
+    opacity:0;
+    background-image: url(imagenes/TodoEquipo2.png);
+    animation: colocarMedio2-2 6s 84s;
+    animation-fill-mode: forwards;
+}
+.letreroMedio2-2{
+    opacity:0;
+    animation:colocarLetreroMedio2-2 6s 84s;
+    animation-fill-mode: forwards;
+}
+@keyframes colocarMedio2-2{
+    0%{ 
+        top:-100%;
+        right:40vw;
+    }
+    50%{
+        opacity:1;
+        transform: rotate(0deg);
+        top:15vh;
+        right:40vw;
+        width: 300px;
+        height: 300px;
+    }
+    100%{
+        opacity:1;
+        transform: rotate(360deg);
+        top:40vh;
+        right:24vw;
+    }
+}
+@keyframes colocarLetreroMedio2-2{
+    0%{
+        bottom:30vh;
+        right:45vw;
+        opacity: 0;
+    }
+    50%{
+        opacity:1;
+        right:45vw;
+        bottom:30vh;
+        }
+    100%{
+        bottom:30vh;
+        opacity: 1;
+        right:27vw;
+    }
+}
+.medio2-3{
+    opacity:0;
+    background-image: url(imagenes/TodoEquipo2.png);
+    animation: colocarMedio2-3 6s 90s;
+    animation-fill-mode: forwards;
+}
+.letreroMedio2-3{
+    opacity:0;
+    animation:colocarLetreroMedio2-3 6s 90s;
+    animation-fill-mode: forwards;
+}
+@keyframes colocarMedio2-3{
+    0%{ 
+        bottom:100vh;
+        right:40vw;
+    }
+    50%{
+        opacity:1;
+        transform: rotate(0deg);
+        bottom:40vh;
+        right:40vw;
+        width: 300px;
+        height: 300px;
+    }
+    100%{
+        opacity:1;
+        transform: rotate(360deg);
+        bottom:6vh;
+        right:23vw;
+    }
+}
+@keyframes colocarLetreroMedio2-3 {
+    0%{
+        bottom:30vh;
+        right:45vw;
+        opacity: 0;
+    }
+    50%{
+        opacity:1;
+        right:45vw;
+        bottom:30vh;
+    }
+    100%{
+        opacity: 1;
+        bottom:1vh;
+        right:25vw;
+    }
+}
+.delantero2-1{
+    opacity:0;
+    background-image: url(imagenes/TodoEquipo2.png);
+    animation: colocarDelantero2-1 6s 96s;
+    animation-fill-mode: forwards;
+}
+.letreroDelantero2-1{
+    opacity:0;
+    animation:colocarLetreroDelantero2-1 6s 96s;
+    animation-fill-mode: forwards;
+}
+@keyframes colocarDelantero2-1{
+    0%{ 
+        top:-100%;
+        right:40vw;
+    }
+    50%{
+        opacity:1;
+        transform: rotate(0deg);
+        top:15vh;
+        right:40vw;
+        width: 300px;
+        height: 300px;
+    }
+    100%{
+        opacity:1;
+        transform: rotate(360deg);
+        top:14vh;
+        right:36vw;
+    }
+}
+@keyframes colocarLetreroDelantero2-1 {
+    0%{
+        right:45vw;
+        top:70vh;
+        opacity: 0;
+    }
+    50%{
+        opacity:1;
+        right:45vw;
+        top:70vh;
+        }
+    100%{
+        opacity:1;
+        right:37vw;
+        top:38vh;
+    }
+}
+.delantero2-2{
+    opacity:0;
+    background-image: url(imagenes/TodoEquipo2.png);
+    animation: colocarDelantero2-2 6s 102s;
+    animation-fill-mode: forwards;
+}
+.letreroDelantero2-2{
+    opacity:0;
+    animation:colocarLetreroDelantero2-2 6s 102s;
+    animation-fill-mode: forwards;
+}
+@keyframes colocarDelantero2-2{
+    0%{ 
+        bottom:100vh;
+        right:40vw;
+    }
+    50%{
+        opacity:1;
+        transform: rotate(0deg);
+        bottom:30vh;
+        right:40vw;
+        width: 300px;
+        height: 300px;
+    }
+    100%{
+        opacity:1;
+        transform: rotate(360deg);
+        bottom:18vh;
+        right:36vw;
+    }
+}
+@keyframes colocarLetreroDelantero2-2 {
+    0%{
+        bottom:30vh;
+        right:45vw;
+        opacity: 0;
+    }
+    50%{
+        opacity:1;
+        right:45vw;
+        bottom:30vh;
+        }
+    100%{
+        bottom:12vh;
+        opacity: 1;
+        right:37vw;
+    }
+}
